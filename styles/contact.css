@@ -1,12 +1,29 @@
 @import "./general.css";
 
-label {
-  display: block;
+h1 {
+  font-size: var(--fs-heading-3);
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-dark);
+  text-transform: capitalize;
 }
 
-input,
-textarea,
-button {
+#form-contact {
+  font-size: var(--fs-body-reg);
+}
+
+#form-contact label {
+  display: block;
+} 
+
+#form-contact input,
+#form-contact textarea {
+  background-color: #e6e9f1; /* var(--clr-neutral-medium) at 10% opacity */
+  border: none;
+}
+
+#form-contact input,
+#form-contact textarea,
+#form-contact button {
   width: 100%;
 }
 
@@ -19,5 +36,12 @@ button {
   }
   .side-by-side > div {
     width: 50%;
+  }
+}
+
+/* desktop */
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: var(--fs-heading-1);
   }
 }

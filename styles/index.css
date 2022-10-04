@@ -1,7 +1,76 @@
 @import "./general.css";
 
+#hero,
+.company-list,
+#projects,
+#testimonials,
+#services {
+  margin-bottom: var(--spacing-section);
+}
+
+#hero h1 {
+  font-size: 1.875rem; /* 30px */
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-dark);
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 1.25;
+  padding-bottom: var(--spacing-general);
+}
+
+h2 {
+  font-size: 1.875rem; /* 30px */
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-dark);
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: var(--spacing-general);
+}
+
+h3 {
+  font-size: var(--fs-body-med);
+  font-weight: var(--fw-medium);
+  color: var(--clr-neutral-dark);
+  text-transform: capitalize;
+}
+
+#hero p {
+  font-size: var(--fs-headline);
+  text-align: center;
+  color: var(--clr-neutral-medium);
+
+  padding-bottom: var(--spacing-general);
+}
+
 #hero a {
   display: block;
+  width: fit-content;
+  font-size: var(--fs-headline);
+  font-weight: var(--fw-medium);
+  margin: 1em auto;
+}
+
+.hero-img {
+  margin-top: 3rem;
+  margin-bottom: var(--spacing-section);
+}
+
+.hero-img-main {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hero-img-detail {
+  display: none;
+}
+
+.bg-orbit {
+  background-color: var(--clr-neutral-dark);
+  background-image: url("./../images/testimonial-section/orbit.png");
+  background-size: cover;
+  max-width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .memoji {
@@ -13,13 +82,41 @@
   flex-wrap: wrap;
   flex-grow: 1;
   justify-content: space-evenly;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .company-item {
   height: 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 1.5rem 1rem 1rem 1rem;
+}
+
+#testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 28rem;
+  /* padding-top: 3rem; */
+}
+
+#testimonials h2 {
+  font-size: 1.875rem; /* 30px */
+  color: var(--clr-neutral-light);
+  max-width: 24ch;
+  margin-bottom: 0;
+  /* margin-right: auto;
+  margin-left: auto; */
+}
+
+#testimonials q {
+  display: block;
+  font-size: var(--fs-body-med);
+  font-weight: var(--fw-regular);
+  color: var(--clr-secondary);
+  text-align: center;
+  max-width: 42ch;
+  /* margin-right: auto;
+  margin-left: auto; */
 }
 
 .client-profile {
@@ -34,36 +131,153 @@
   border-radius: 50%;
 }
 
+.client-profile p:first-child {
+  font-size: var(--fs-headline);
+  color: var(--clr-primary-hover);
+}
+
+.client-profile p:last-child {
+  font-size: var(--fs-caption-2);
+  color: var(--clr-neutral-light);
+}
+
+/* tablet */
 @media only screen and (min-width: 768px) {
-  .bg-neutral-dark {
-    position: relative;
-    min-height: 500px;
-    max-width: 1320px;
+  #hero h1 {
+    font-size: var(--fs-heading-1);
+  }
+  #hero p {
+    font-size: var(--fs-body-reg);
+    max-width: 55ch;
     margin-right: auto;
     margin-left: auto;
   }
+  #hero a {
+    margin: 1rem 0;
+  }
+
+  .hero-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  #services .card-item {
+    max-width: var(--width-max-desktop);
+  }
+
+  .hero-img {
+    position: relative;
+    padding: 0 5rem 4rem 5rem;
+  }
+
+  .hero-img-main {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hero-img-detail {
+    position: absolute;
+    display: block;
+    width: 250px;
+  }
+
+  .hero-img-detail-1 {
+    top: 0;
+    left: 0;
+  }
+
+  .hero-img-detail-2 {
+    bottom: 0;
+    right: 0;
+  }
+
+  #projects h2,
+  #services h2 {
+    font-size: var(--fs-heading-3);
+    text-align: left;
+  }
+
+  #testimonials h2 {
+    font-size: var(--fs-heading-3);
+    max-width: 20ch;
+  }
+
+  .newsletter h2 {
+    font-size: var(--fs-heading-3);
+  }
+
+  #testimonials {
+    position: relative;
+    min-height: 500px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   .memoji {
     position: absolute;
     display: block;
+    height: 100px;
+    aspect-ratio: 1;
   }
 
   .memoji-1 {
-    top: 0;
-    left: 0;
+    top: 2rem;
+    left: 3rem;
   }
 
   .memoji-2 {
-    top: 0;
-    right: 0;
+    top: 2rem;
+    right: 3rem;
   }
 
   .memoji-3 {
-    bottom: 0;
-    left: 0;
+    bottom: 1rem;
+    left: 3rem;
   }
 
   .memoji-4 {
-    bottom: 0;
-    right: 0;
+    bottom: 1rem;
+    right: 3rem;
+  }
+}
+
+/* desktop */
+@media only screen and (min-width: 992px) {
+  #hero,
+  .company-list,
+  #projects,
+  #testimonials,
+  #services {
+    margin-bottom: var(--spacing-section-desktop);
+  }
+  #hero {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  #hero > div:first-child {
+    max-width: 50%;
+  }
+
+  #hero > div:last-child {
+    min-width: 50%;
+  }
+
+  #hero h1,
+  #hero p {
+    text-align: left;
+  }
+
+  .hero-cta {
+    justify-content: flex-start;
+  }
+
+  #testimonials {
+    min-height: 620px;
+  }
+  .memoji {
+    height: 150px;
   }
 }

@@ -1,8 +1,41 @@
 @import "./general.css";
 
+article {
+  font-size: var(--fs-body-reg);
+  margin-bottom: 4rem;
+}
+
+article > p {
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-size: var(--fs-heading-3);
+  font-weight: var(--fw-bold);
+  text-transform: capitalize;
+}  
+
+.project-summary > p:first-child {
+  font-weight: var(--fw-medium);
+}
+
+.project-summary > p:first-child,
+.project-summary time {
+  color: var(--clr-neutral-medium);
+}
+
+/* tablet */
 @media only screen and (min-width: 768px) {
+  h1 {
+    font-size: var(--fs-heading-1);
+  }
+
   .project-summary {
     display: flex;
     justify-content: space-between;
+  }
+
+  .project-summary > p:first-child {
+    font-size: var(--fs-body-med);
   }
 }

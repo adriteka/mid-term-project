@@ -1,5 +1,13 @@
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M24.9972 25L33.3305 33.3333" stroke="#072AC8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M24.9972 25L21.6639 33.3333L14.9972 15L33.3305 21.6667L24.9972 25Z" stroke="#072AC8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M23.2472 6.75031L19.7138 10.2837M10.2805 19.7169L6.74714 23.2504L10.2805 19.7169ZM11.9805 3.73364L13.2805 8.56703L11.9805 3.73364ZM8.5638 13.267L3.73047 11.967L8.5638 13.267Z" stroke="#072AC8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+    <g transform="matrix(1,0,0,1,10,10)">
+        <path d="M24.997,25L33.331,33.333" style="fill:none;fill-rule:nonzero;stroke:rgb(7,42,200);stroke-width:2.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,10,10)">
+        <path d="M24.997,25L21.664,33.333L14.997,15L33.331,21.667L24.997,25Z" style="fill:none;fill-rule:nonzero;stroke:rgb(7,42,200);stroke-width:2.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,10,10)">
+        <path d="M23.247,6.75L19.714,10.284M10.281,19.717L6.747,23.25L10.281,19.717ZM11.98,3.734L13.281,8.567L11.98,3.734ZM8.564,13.267L3.73,11.967L8.564,13.267Z" style="fill:none;fill-rule:nonzero;stroke:rgb(7,42,200);stroke-width:2.5px;"/>
+    </g>
 </svg>
