@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Circle Agency - Home</title>
-    <!-- <link rel="stylesheet" href="styles/index.css" /> -->
+    <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
     <!-- Formato desktop -->
-    <header>
+    <header class="container">
       <a href="index.html"
         ><img
           src="images/logos/circle.svg"
@@ -27,119 +27,166 @@
       <!-- TODO - Formato hamburger menu -->
     </header>
     <main>
-      <section id="hero">
-        <h1>Empower your business with stunning design!</h1>
-        <p>
-          Circle is a digital design and development studio. We design and
-          develop astonishing websites and mobile apps.
-        </p>
-        <a href="contact.html">Get in touch</a>
-        <a href="#">See our work</a>
-        <img
-          src="images/hero-section/hero-image.png"
-          alt="Stock photo of an arguably happy customer"
-        />
-        <section id="hero__companies">
+      <div class="container">
+        <section id="hero">
+          <h1>Empower your business with stunning design!</h1>
+          <p>
+            Circle is a digital design and development studio. We design and
+            develop astonishing websites and mobile apps.
+          </p>
+          <a href="contact.html">Get in touch</a>
+          <a href="#">See our work</a>
           <img
-            src="images/logos/airbnb-logo.svg"
-            alt="airbnb logo"
-            title="airbnb"
+            src="images/hero-section/hero-image.png"
+            alt="Stock photo of an arguably happy customer"
           />
-          <img
-            src="images/logos/google-logo.svg"
-            alt="Google logo"
-            title="Google"
-          />
-          <img
-            src="images/logos/microsoft-logo.svg"
-            alt="Microsoft logo"
-            title="Microsoft"
-          />
-          <img
-            src="images/logos/fedex-logo.svg"
-            alt="FedEx logo"
-            title="FedEx"
-          />
-          <img
-            src="images/logos/amazon-logo.svg"
-            alt="Amazon logo"
-            title="Amazon"
-          />
+          <section class="company-list">
+            <img
+              class="company-item"
+              src="images/logos/airbnb-logo.svg"
+              alt="airbnb logo"
+              title="airbnb"
+            />
+            <img
+              class="company-item"
+              src="images/logos/google-logo.svg"
+              alt="Google logo"
+              title="Google"
+            />
+            <img
+              class="company-item"
+              src="images/logos/microsoft-logo.svg"
+              alt="Microsoft logo"
+              title="Microsoft"
+            />
+            <img
+              class="company-item"
+              src="images/logos/fedex-logo.svg"
+              alt="FedEx logo"
+              title="FedEx"
+            />
+            <img
+              class="company-item"
+              src="images/logos/amazon-logo.svg"
+              alt="Amazon logo"
+              title="Amazon"
+            />
+          </section>
         </section>
-      </section>
 
-      <section class="card-list">
-        <h2>Recent projects</h2>
-        <h3>Simplify</h3>
-        <p>UI Design & App Development</p>
-        <img src="images/projects-section/1.jpg" alt="" /><a href="project.html"
-          >Learn more</a
-        >
-        <h3>Dashcoin</h3>
-        <p>Web Development</p>
-        <img src="images/projects-section/2.jpg" alt="" /><a href=""
-          >Learn more</a
-        >
-        <h3>Vectorify</h3>
-        <p>User Experience Design</p>
-        <img src="images/projects-section/3.jpg" alt="" /><a href=""
-          >Learn more</a
-        >
-      </section>
+        <section>
+          <h2>Recent projects</h2>
+          <div class="card-list">
+            <div class="card-item">
+              <h3>Simplify</h3>
+              <p>UI Design & App Development</p>
+              <img src="images/projects-section/1.jpg" alt="" />
+              <a href="project.html">Learn more</a>
+            </div>
+            <div class="card-item">
+              <h3>Dashcoin</h3>
+              <p>Web Development</p>
+              <img src="images/projects-section/2.jpg" alt="" />
+              <a href="">Learn more</a>
+            </div>
+            <div class="card-item">
+              <h3>Vectorify</h3>
+              <p>User Experience Design</p>
+              <img src="images/projects-section/3.jpg" alt="" />
+              <a href="">Learn more</a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="bg-neutral-dark">
+        <img
+          class="memoji memoji-1"
+          src="images/testimonial-section/memoji-1.png"
+          alt=""
+        />
+        <img
+          class="memoji memoji-2"
+          src="images/testimonial-section/memoji-2.png"
+          alt=""
+        />
+        <img
+          class="memoji memoji-3"
+          src="images/testimonial-section/memoji-3.png"
+          alt=""
+        />
+        <img
+          class="memoji memoji-4"
+          src="images/testimonial-section/memoji-4.png"
+          alt=""
+        />
 
-      <section id="testimonials">
-        <h2>Hear what our clients have to say</h2>
-        <q
-          >Circle helped us through every stage of our startup. We really
-          enjoyed working with you.</q
-        >
-        <div>
-          <img src="images/testimonial-section/profile.jpg" alt="" />
-          <div>
-            <p>Kristin Watson</p>
-            <p>Booking.com</p>
+        <section id="testimonials" class="container">
+          <h2>Hear what our clients have to say</h2>
+          <q
+            >Circle helped us through every stage of our startup. We really
+            enjoyed working with you.</q
+          >
+          <div class="client-profile">
+            <img src="images/testimonial-section/profile.jpg" alt="" />
+            <div>
+              <p>Kristin Watson</p>
+              <p>Booking.com</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="container">
+        <h2>Our services</h2>
+        <div class="card-list">
+          <div class="card-item--small">
+            <h3>User Interface design</h3>
+            <p>
+              Circle provides you with a stunning user interface design that is
+              accessible to everyone.
+            </p>
+            <div class="card-item-icon">
+              <img src="images/services-section/icons/1.svg" alt="" />
+            </div>
+            <a href="">Learn more</a>
+          </div>
+          <div class="card-item--small">
+            <h3>User Experience design</h3>
+            <p>
+              Circle always focuses on delivering the best user experience to
+              your customers.
+            </p>
+            <div class="card-item-icon">
+              <img src="images/services-section/icons/2.svg" alt="" />
+            </div>
+            <a href="">Learn more</a>
+          </div>
+          <div class="card-item--small">
+            <h3>Application development</h3>
+            <p>
+              We develop high-quality mobile and web applications using the
+              latest technology stack.
+            </p>
+            <div class="card-item-icon">
+              <img src="images/services-section/icons/3.svg" alt="" />
+            </div>
+            <a href="">Learn more</a>
           </div>
         </div>
       </section>
-
-      <section id="services" class="card-list">
-        <h2>Our services</h2>
-        <h3>User Interface design</h3>
-        <p>
-          Circle provides you with a stunning user interface design that is
-          accessible to everyone.
-        </p>
-        <img src="images/services-section/icons/1.svg" alt="" />
-        <a href="">Learn more</a>
-        <h3>User Experience design</h3>
-        <p>
-          Circle always focuses on delivering the best user experience to your
-          customers.
-        </p>
-        <img src="images/services-section/icons/2.svg" alt="" /><a href=""
-          >Learn more</a
-        >
-        <h3>Application development</h3>
-        <p>
-          We develop high-quality mobile and web applications using the latest
-          technology stack.
-        </p>
-        <img src="images/services-section/icons/3.svg" alt="" /><a href=""
-          >Learn more</a
-        >
-      </section>
-
-      <section class="newsletter">
-        <h2>Do you have any questions?</h2>
-        <p>Let us help you!</p>
-        <form id="form-newsletter" action="#" method="post">
-          <img src="images/newsletter/icon/mail.svg" alt="" />
-          <input type="email" name="" id="" placeholder="Enter your email" />
-          <button type="submit">Subscribe</button>
-        </form>
-      </section>
+      <div class="bg-secondary">
+        <section class="container">
+          <h2>Do you have any questions?</h2>
+          <p>Let us help you!</p>
+          <form id="form-news" action="#" method="post">
+            <input type="email" name="" id="" placeholder="Enter your email" />
+            <img id="icon-email" src="images/newsletter/icon/mail.svg" alt="" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </section>
+      </div>
     </main>
-    <footer>
+    <footer class="container">
       <img
         src="images/logos/circle.svg"
         alt="Circle Agency logo"

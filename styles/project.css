@@ -1,0 +1,8 @@
+@import "./general.css";
+
+@media only screen and (min-width: 768px) {
+  .project-summary {
+    display: flex;
+    justify-content: space-between;
+  }
+}

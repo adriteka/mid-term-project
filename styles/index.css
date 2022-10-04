@@ -1,0 +1,69 @@
+@import "./general.css";
+
+#hero a {
+  display: block;
+}
+
+.memoji {
+  display: none;
+}
+
+.company-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.company-item {
+  height: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.client-profile {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+}
+
+.client-profile img {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  .bg-neutral-dark {
+    position: relative;
+    min-height: 500px;
+    max-width: 1320px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .memoji {
+    position: absolute;
+    display: block;
+  }
+
+  .memoji-1 {
+    top: 0;
+    left: 0;
+  }
+
+  .memoji-2 {
+    top: 0;
+    right: 0;
+  }
+
+  .memoji-3 {
+    bottom: 0;
+    left: 0;
+  }
+
+  .memoji-4 {
+    bottom: 0;
+    right: 0;
+  }
+}
