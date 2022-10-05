@@ -8,35 +8,126 @@
     <link rel="stylesheet" href="styles/contact.css" />
   </head>
   <body class="container">
-    <!-- TODO - Copiar de Home -->
-    <header><p>HEADER TO BE INCLUDED</p></header>
+    <header>
+      <div>
+        <a href="index.html"
+          ><img
+            src="images/logos/circle.svg"
+            alt="Circle Agency logo"
+            title="Circle Agency"
+        /></a>
+
+        <!-- desktop nav -->
+        <nav id="nav-primary">
+          <a href="index.html">Home</a>
+          <a href="#">Projects</a>
+          <a href="#">Services</a>
+        </nav>
+        <a id="nav-contact" class="button" href="contact.html">Contact Us</a>
+
+        <!-- mobile & tablet nav -->
+        <div id="menu-hamburger">
+          <img
+            id="menu-open"
+            class="menu-icon"
+            src="images/nav/menu-open.svg"
+            alt=""
+          />
+          <img
+            id="menu-close"
+            class="menu-icon is-hidden"
+            src="images/nav/menu-close.svg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- mobile & tablet nav -->
+      <div class="menu-hamburger-nav is-hidden">
+        <a href="index.html">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">Services</a>
+        <a class="button" href="contact.html">Contact Us</a>
+      </div>
+    </header>
     <main>
       <h1>Contact us</h1>
       <form id="form-contact" method="post" action="#">
-        <label for="input-name">Full name *</label>
-        <input type="text" name="input-name" id="" required />
+        <div class="label-error">
+          <label for="input-name">Full name *</label>
+          <p id="error-name" class="error-msg"></p>
+        </div>
+        <input
+          type="text"
+          name="input-name"
+          id="form-contact-name"
+          placeholder="Enter your full name"
+          required
+        />
         <div class="side-by-side">
           <div>
-            <label for="input-email">Email</label>
-            <input type="email" name="input-email" id="" />
+            <div class="label-error">
+              <label for="input-email">Email</label>
+              <p id="error-email" class="error-msg"></p>
+            </div>
+            <input
+              type="email"
+              name="input-email"
+              id="form-contact-email"
+              placeholder="Enter your full email"
+            />
           </div>
           <div>
-            <label for="input-phone">Phone</label>
-            <input type="text" name="input-phone" id="" />
+            <div class="label-error">
+              <label for="input-phone">Phone</label>
+              <p id="error-phone" class="error-msg"></p>
+            </div>
+            <input
+              type="text"
+              name="input-phone"
+              id="form-contact-phone"
+              placeholder="Enter your full phone (digits only)"
+            />
           </div>
         </div>
-        <label for="textarea-message">Message *</label>
+        <div class="label-error">
+          <label for="textarea-message">Message *</label>
+          <p id="error-message" class="error-msg"></p>
+        </div>
         <textarea
           name="textarea-message"
-          id=""
-          cols="30"
-          rows="10"
+          id="form-contact-message"
+          placeholder="Write your message here... (at least 10 characters)"
           required
+          minlength="10"
+          maxlength="512"
         ></textarea>
         <button class="button" type="submit">Submit</button>
       </form>
     </main>
-    <!-- TODO - Copiar de Home -->
-    <footer><p>FOOTER TO BE INCLUDED</p></footer>
+    <footer>
+      <div>
+        <img
+          class="logo-circle"
+          src="images/logos/circle.svg"
+          alt="Circle Agency logo"
+          title="Circle Agency"
+        />
+        <address>
+          2972 Westheimer Rd. Santa Ana,<br />
+          Illinois 85486
+        </address>
+      </div>
+      <nav class="nav-secondary">
+        <a href="#">Team</a>
+        <a href="#">Services</a>
+        <a href="#">About Us</a>
+        <a href="#">Press</a>
+        <a href="#">Projects</a>
+        <a href="#">Privacy Policy</a>
+      </nav>
+    </footer>
+    <script src="scripts/general.js"></script>
+    <script src="scripts/contact.js"></script>
   </body>
 </html>

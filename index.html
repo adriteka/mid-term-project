@@ -8,21 +8,47 @@
     <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
-    <!-- Formato desktop -->
     <header class="container">
-      <a href="index.html"
-        ><img
-          src="images/logos/circle.svg"
-          alt="Circle Agency logo"
-          title="Circle Agency"
-      /></a> 
-      <nav class="nav-primary">
+      <div>
+        <a href="index.html"
+          ><img
+            src="images/logos/circle.svg"
+            alt="Circle Agency logo"
+            title="Circle Agency"
+        /></a>
+
+        <!-- desktop nav -->
+        <nav id="nav-primary">
+          <a href="index.html">Home</a>
+          <a href="#">Projects</a>
+          <a href="#">Services</a>
+        </nav>
+        <a id="nav-contact" class="button" href="contact.html">Contact Us</a>
+
+        <!-- mobile & tablet nav -->
+        <div id="menu-hamburger">
+          <img
+            id="menu-open"
+            class="menu-icon"
+            src="images/nav/menu-open.svg"
+            alt=""
+          />
+          <img
+            id="menu-close"
+            class="menu-icon is-hidden"
+            src="images/nav/menu-close.svg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- mobile & tablet nav -->
+      <div class="menu-hamburger-nav is-hidden">
         <a href="index.html">Home</a>
         <a href="#">Projects</a>
         <a href="#">Services</a>
-      </nav>
-      <a class="button" href="contact.html">Contact Us</a>
-      <!-- TODO - Formato hamburger menu -->
+        <a class="button" href="contact.html">Contact Us</a>
+      </div>
     </header>
     <main>
       <div class="container">
@@ -57,79 +83,11 @@
           </div>
         </section>
 
-        <section class="company-list">
-          <img
-            class="company-item"
-            src="images/logos/airbnb-logo.svg"
-            alt="airbnb logo"
-            title="airbnb"
-          />
-          <img
-            class="company-item"
-            src="images/logos/google-logo.svg"
-            alt="Google logo"
-            title="Google"
-          />
-          <img
-            class="company-item"
-            src="images/logos/microsoft-logo.svg"
-            alt="Microsoft logo"
-            title="Microsoft"
-          />
-          <img
-            class="company-item"
-            src="images/logos/fedex-logo.svg"
-            alt="FedEx logo"
-            title="FedEx"
-          />
-          <img
-            class="company-item"
-            src="images/logos/amazon-logo.svg"
-            alt="Amazon logo"
-            title="Amazon"
-          />
-        </section>
+        <section class="company-list"></section>
 
         <section id="projects">
           <h2>Recent projects</h2>
-          <div class="card-list">
-            <div class="card-item">
-              <div class="card-item-contents">
-                <h3>Simplify</h3>
-                <p>UI Design & App Development</p>
-                <a href="project.html">Learn more</a>
-              </div>
-              <img
-                class="card-item-img"
-                src="images/projects-section/1.jpg"
-                alt=""
-              />
-            </div>
-            <div class="card-item">
-              <div class="card-item-contents">
-                <h3>Dashcoin</h3>
-                <p>Web Development</p>
-                <a href="#">Learn more</a>
-              </div>
-              <img
-                class="card-item-img"
-                src="images/projects-section/2.jpg"
-                alt=""
-              />
-            </div>
-            <div class="card-item">
-              <div class="card-item-contents">
-                <h3>Vectorify</h3>
-                <p>User Experience Design</p>
-                <a href="#">Learn more</a>
-              </div>
-              <img
-                class="card-item-img"
-                src="images/projects-section/3.jpg"
-                alt=""
-              />
-            </div>
-          </div>
+          <div class="card-list"></div>
         </section>
       </div>
       <div class="bg-orbit">
@@ -171,53 +129,7 @@
 
       <section id="services" class="container">
         <h2>Our services</h2>
-        <div class="card-list">
-          <div class="card-item">
-            <div class="card-item-contents">
-              <h3>User Interface design</h3>
-              <p>
-                Circle provides you with a stunning user interface design that
-                is accessible to everyone.
-              </p>
-              <a href="#">Learn more</a>
-            </div>
-            <img
-              class="card-item-icon"
-              src="images/services-section/icons/1.svg"
-              alt=""
-            />
-          </div>
-          <div class="card-item">
-            <div class="card-item-contents">
-              <h3>User Experience design</h3>
-              <p>
-                Circle always focuses on delivering the best user experience to
-                your customers.
-              </p>
-              <a href="#">Learn more</a>
-            </div>
-            <img
-              class="card-item-icon"
-              src="images/services-section/icons/2.svg"
-              alt=""
-            />
-          </div>
-          <div class="card-item">
-            <div class="card-item-contents">
-              <h3>Application development</h3>
-              <p>
-                We develop high-quality mobile and web applications using the
-                latest technology stack.
-              </p>
-              <a href="#">Learn more</a>
-            </div>
-            <img
-              class="card-item-icon"
-              src="images/services-section/icons/3.svg"
-              alt=""
-            />
-          </div>
-        </div>
+        <div class="card-list"></div>
       </section>
       <div class="bg-newsletter">
         <section class="newsletter container">
@@ -253,5 +165,7 @@
         <a href="#">Privacy Policy</a>
       </nav>
     </footer>
+    <script src="scripts/general.js"></script>
+    <script src="scripts/index.js"></script>
   </body>
 </html>

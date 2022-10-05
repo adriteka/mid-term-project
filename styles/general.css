@@ -100,7 +100,7 @@ svg {
   --width-max-desktop: 31%;
   --spacing-general: 2rem;
   --spacing-section: 4rem;
-  --spacing-section-desktop: 8rem;
+  --spacing-section-desktop: 6rem;
 }
 
 /* ESTILO GENERAL */
@@ -109,6 +109,39 @@ body {
   font-size: var(--fs-headline);
   color: var(--clr-neutral-dark);
   background-color: var(--clr-neutral-light);
+  padding: 1rem 0;
+}
+
+header {
+  margin-bottom: 3rem;
+}
+
+header > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo-circle {
+  width: 60px;
+}
+
+#nav-primary,
+#nav-contact {
+  display: none;
+}
+
+main {
+  margin-bottom: var(--spacing-section);
+}
+
+h2 {
+  font-size: 1.875rem; /* 30px */
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-dark);
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: var(--spacing-general);
 }
 
 a {
@@ -128,12 +161,17 @@ button {
   border: none;
 }
 
+input:focus,
+textarea:focus {
+  outline-style: solid;
+  outline-color: var(--clr-primary-tapped);
+}
+
 .container {
-  max-width: 1200px;
+  padding-right: var(--spacing-general);
+  padding-left: var(--spacing-general);
   margin-right: auto;
   margin-left: auto;
-  padding-right: 1.875rem;
-  padding-left: 1.875rem;
 }
 
 .button {
@@ -154,14 +192,24 @@ button {
   margin-left: auto;
 }
 
-header .logo-circle {
-  width: 60px;
+.menu-icon {
+  width: 36px;
+  aspect-ratio: 1;
+  padding: 0.5rem;
 }
 
-footer .logo-circle {
-  width: 100px;
-  margin-right: auto;
-  margin-left: auto;
+.menu-hamburger-nav {
+  position: absolute;
+  left: 0;
+  top: calc(1rem + 36px);
+  background-color: var(--clr-neutral-medium);
+  width: 100%;
+}
+
+.menu-hamburger-nav > a {
+  display: block;
+  color: #fff;
+  padding: 0.75rem 0 0.75rem 2.5rem;
 }
 
 .card-item {
@@ -212,7 +260,6 @@ footer .logo-circle {
 .newsletter {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  margin-bottom: var(--spacing-section);
 }
 
 .newsletter h2 {
@@ -224,7 +271,7 @@ footer .logo-circle {
 }
 
 .newsletter p {
-  font-size: var(--fs-body-med);
+  font-size: var(--fs-body-reg);
   font-weight: var(--fw-regular);
   text-align: center;
   color: var(--clr-neutral-dark);
@@ -257,11 +304,13 @@ footer .logo-circle {
 }
 
 footer {
-  width: 90%;
-  padding-bottom: 6rem;
+  padding-bottom: 5rem;
 }
 
 footer .logo-circle {
+  width: 100px;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 2rem;
 }
 
@@ -281,19 +330,35 @@ address {
 .nav-secondary a {
   font-weight: var(--fw-regular);
   color: var(--clr-primary-default);
-  /* padding-bottom: var(--spacing-general); */
+  line-height: 1.25;
+}
+
+.is-hidden {
+  display: none;
+}
+
+/* bigger phone */
+@media only screen and (min-width: 480px) {
+  /* #hero h1 {
+    font-size: var(--fs-heading-3);
+  } */
+
+  h2 {
+    font-size: var(--fs-heading-3);
+  }
 }
 
 /* tablet */
 @media only screen and (min-width: 768px) {
-
-
+  h2 {
+    text-align: left;
+  }
   .card-list {
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
-    justify-content: space-between;
-    column-gap: 1.5rem;
+    justify-content: flex-start;
+    column-gap: 1.25rem;
     row-gap: 0.5rem;
   }
   .card-item {
@@ -336,24 +401,36 @@ address {
   address {
     text-align: left;
   }
-} 
+}
 
 /* desktop */
 @media only screen and (min-width: 992px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 4.375rem;
+  .container {
+    max-width: 1200px;
+    padding-right: 3.125rem;
+    padding-left: 3.125rem;
   }
 
-  .nav-primary {
+  header {
+    margin-top: 4.375rem;
+    margin-bottom: 4.375rem;
+  }
+
+  main {
+    margin-bottom: var(--spacing-section-desktop);
+  }
+
+  #nav-primary {
     display: flex;
     gap: 3.5rem;
   }
 
-  .newsletter {
-    margin-bottom: var(--spacing-section-desktop);
+  #nav-contact {
+    display: block;
+  }
+
+  #menu-hamburger {
+    display: none;
   }
 
   .card-item {

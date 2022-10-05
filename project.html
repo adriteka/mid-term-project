@@ -8,14 +8,54 @@
     <link rel="stylesheet" href="styles/project.css" />
   </head>
   <body>
-    <!-- TODO - Copiar de Home -->
+    <header class="container">
+      <div>
+        <a href="index.html"
+          ><img
+            src="images/logos/circle.svg"
+            alt="Circle Agency logo"
+            title="Circle Agency"
+        /></a>
 
-    <header class="container"><p>HEADER TO BE INCLUDED</p></header>
+        <!-- desktop nav -->
+        <nav id="nav-primary">
+          <a href="index.html">Home</a>
+          <a href="#">Projects</a>
+          <a href="#">Services</a>
+        </nav>
+        <a id="nav-contact" class="button" href="contact.html">Contact Us</a>
+
+        <!-- mobile & tablet nav -->
+        <div id="menu-hamburger">
+          <img
+            id="menu-open"
+            class="menu-icon"
+            src="images/nav/menu-open.svg"
+            alt=""
+          />
+          <img
+            id="menu-close"
+            class="menu-icon is-hidden"
+            src="images/nav/menu-close.svg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- mobile & tablet nav -->
+      <div class="menu-hamburger-nav is-hidden">
+        <a href="index.html">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">Services</a>
+        <a class="button" href="contact.html">Contact Us</a>
+      </div>
+    </header>
     <main class="container">
       <article>
         <h1>Simplify</h1>
+        <p class="subtitle">UI Design & App Development</p>
         <div class="project-summary">
-          <p>UI Design & App Development</p> 
+          <p>Created by <span>Anonymous</span></p>
           <p>Completed on <time datetime="3021-06-22">June 22, 2021</time></p>
         </div>
         <img src="images/projects-section/1.jpg" alt="" />
@@ -41,16 +81,82 @@
           vehicula sit amet vel mi.
         </p>
       </article>
-      <section class="card-list">
-        <!-- TODO - Adaptar de Home > Projects -->
+      <section id="projects">
         <h2>Other projects</h2>
-        <p>CARDS TO BE INCLUDED</p>
+        <div class="card-list">
+          <div class="card-item">
+            <div class="card-item-contents">
+              <h3>Simplify</h3>
+              <p>UI Design & App Development</p>
+              <a href="project.html">Learn more</a>
+            </div>
+            <img
+              class="card-item-img"
+              src="images/projects-section/1.jpg"
+              alt=""
+            />
+          </div>
+          <div class="card-item">
+            <div class="card-item-contents">
+              <h3>Dashcoin</h3>
+              <p>Web Development</p>
+              <a href="#">Learn more</a>
+            </div>
+            <img
+              class="card-item-img"
+              src="images/projects-section/2.jpg"
+              alt=""
+            />
+          </div>
+          <div class="card-item">
+            <div class="card-item-contents">
+              <h3>Vectorify</h3>
+              <p>User Experience Design</p>
+              <a href="#">Learn more</a>
+            </div>
+            <img
+              class="card-item-img"
+              src="images/projects-section/3.jpg"
+              alt=""
+            />
+          </div>
+        </div>
       </section>
-
-      <!-- TODO - Copiar de Home -->
-      <section>NEWSLETTER TO BE INCLUDED</section>
+      <div class="bg-newsletter">
+        <section class="newsletter container">
+          <h2>Do you have any questions?</h2>
+          <p>Let us help you!</p>
+          <form id="form-news" action="#" method="post">
+            <input type="email" name="" id="form-news-email" placeholder="Enter your email" />
+            <img id="icon-email" src="images/newsletter/icon/mail.svg" alt="" />
+            <button class="button" type="submit">Subscribe</button>
+          </form>
+        </section>
+      </div>
     </main>
-    <!-- TODO - Copiar de Home -->
-    <footer><p>FOOTER TO BE INCLUDED</p></footer>
+    <footer class="container">
+      <div>
+        <img
+          class="logo-circle"
+          src="images/logos/circle.svg"
+          alt="Circle Agency logo"
+          title="Circle Agency"
+        />
+        <address>
+          2972 Westheimer Rd. Santa Ana,<br />
+          Illinois 85486
+        </address>
+      </div>
+      <nav class="nav-secondary">
+        <a href="#">Team</a>
+        <a href="#">Services</a>
+        <a href="#">About Us</a>
+        <a href="#">Press</a>
+        <a href="#">Projects</a>
+        <a href="#">Privacy Policy</a>
+      </nav>
+    </footer>
+    <script src="scripts/general.js"></script>
+    <script src="scripts/project.js"></script>
   </body>
 </html>
