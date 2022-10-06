@@ -215,22 +215,28 @@ textarea:focus {
 .card-item {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: #fff;
+  padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.card-item-contents {
-  padding: 1.5rem 2rem;
-}
-
-.card-item-contents > * {
+.card-item > h3,
+.card-item > p,
+.card-item > a {
+  padding-right: var(--spacing-general);
+  padding-left: var(--spacing-general);
   padding-bottom: 1rem;
 }
 
-.card-item-contents a {
+.card-item > h3,
+.card-item > a {
+  padding-top: 1.5rem;
+}
+
+.card-item > a {
   color: var(--clr-primary-default);
   display: block;
-  padding-top: 1.5rem;
 }
 
 .card-item > img {
@@ -243,18 +249,11 @@ textarea:focus {
 }
 
 .card-item-icon {
-  margin: 2rem 0 0 2rem;
-}
-
-.card-item-icon {
   background-color: var(--clr-neutral-light-blue);
   width: 80px;
   aspect-ratio: 1;
   border-radius: 50%;
-}
-
-.card-item-icon img {
-  margin: auto;
+  margin: var(--spacing-general) 0 0 var(--spacing-general);
 }
 
 .newsletter {
@@ -265,6 +264,7 @@ textarea:focus {
 .newsletter h2 {
   font-size: 1.875rem; /* 30px */
   font-weight: var(--fw-bold);
+  line-height: 1.25;
   text-align: center;
   color: var(--clr-neutral-dark);
   margin-bottom: 1rem;
@@ -281,7 +281,7 @@ textarea:focus {
 #form-news {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 80%;
   position: relative;
   margin-right: auto;
   margin-left: auto;
@@ -353,22 +353,11 @@ address {
   h2 {
     text-align: left;
   }
+
   .card-list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    justify-content: flex-start;
-    column-gap: 1.25rem;
-    row-gap: 0.5rem;
-  }
-  .card-item {
-    max-width: var(--width-max-tablet);
-  }
-  .card-item-contents {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
   }
 
   #form-news {
@@ -433,7 +422,7 @@ address {
     display: none;
   }
 
-  .card-item {
-    max-width: var(--width-max-desktop);
+  .card-list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

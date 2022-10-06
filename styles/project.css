@@ -11,8 +11,8 @@ article > p {
 
 article > img {
   object-fit: cover;
-  aspect-ratio: 1.75;
-  padding-bottom: 4rem; /* var(--spacing-section); */
+  aspect-ratio: 1;
+  padding-bottom: var(--spacing-general);
 }
 
 h1 {
@@ -23,6 +23,7 @@ h1 {
 }
 
 .project-summary {
+  font-size: var(--fs-headline);
   padding-bottom: var(--spacing-general);
 }
 
@@ -46,12 +47,18 @@ h1 {
     font-size: var(--fs-heading-1);
   }
 
+  .subtitle {
+    font-size: var(--fs-body-med);
+  }
+
   .project-summary {
+    font-size: var(--fs-body-reg);
     display: flex;
     justify-content: space-between;
   }
 
-  .subtitle {
-    font-size: var(--fs-body-med);
+  article > img {
+    aspect-ratio: 1.75;
+    padding-bottom: var(--spacing-section);
   }
 }

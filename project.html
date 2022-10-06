@@ -20,8 +20,8 @@
         <!-- desktop nav -->
         <nav id="nav-primary">
           <a href="index.html">Home</a>
-          <a href="#">Projects</a>
-          <a href="#">Services</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#services">Services</a>
         </nav>
         <a id="nav-contact" class="button" href="contact.html">Contact Us</a>
 
@@ -45,13 +45,13 @@
       <!-- mobile & tablet nav -->
       <div class="menu-hamburger-nav is-hidden">
         <a href="index.html">Home</a>
-        <a href="#">Projects</a>
-        <a href="#">Services</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#services">Services</a>
         <a class="button" href="contact.html">Contact Us</a>
       </div>
     </header>
-    <main class="container">
-      <article>
+    <main>
+      <article class="container">
         <h1>Simplify</h1>
         <p class="subtitle">UI Design & App Development</p>
         <div class="project-summary">
@@ -81,15 +81,13 @@
           vehicula sit amet vel mi.
         </p>
       </article>
-      <section id="projects">
+      <section id="projects" class="container">
         <h2>Other projects</h2>
         <div class="card-list">
           <div class="card-item">
-            <div class="card-item-contents">
-              <h3>Simplify</h3>
-              <p>UI Design & App Development</p>
-              <a href="project.html">Learn more</a>
-            </div>
+            <h3>Simplify</h3>
+            <p>UI Design & App Development</p>
+            <a href="project.html">Learn more</a>
             <img
               class="card-item-img"
               src="images/projects-section/1.jpg"
@@ -97,11 +95,9 @@
             />
           </div>
           <div class="card-item">
-            <div class="card-item-contents">
-              <h3>Dashcoin</h3>
-              <p>Web Development</p>
-              <a href="#">Learn more</a>
-            </div>
+            <h3>Dashcoin</h3>
+            <p>Web Development</p>
+            <a href="project.html">Learn more</a>
             <img
               class="card-item-img"
               src="images/projects-section/2.jpg"
@@ -109,11 +105,9 @@
             />
           </div>
           <div class="card-item">
-            <div class="card-item-contents">
-              <h3>Vectorify</h3>
-              <p>User Experience Design</p>
-              <a href="#">Learn more</a>
-            </div>
+            <h3>Vectorify</h3>
+            <p>User Experience Design</p>
+            <a href="project.html">Learn more</a>
             <img
               class="card-item-img"
               src="images/projects-section/3.jpg"
@@ -127,7 +121,12 @@
           <h2>Do you have any questions?</h2>
           <p>Let us help you!</p>
           <form id="form-news" action="#" method="post">
-            <input type="email" name="" id="form-news-email" placeholder="Enter your email" />
+            <input
+              type="email"
+              pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+"
+              title="E.g. nombre@dominio.com"
+              placeholder="Enter your email"
+            />
             <img id="icon-email" src="images/newsletter/icon/mail.svg" alt="" />
             <button class="button" type="submit">Subscribe</button>
           </form>

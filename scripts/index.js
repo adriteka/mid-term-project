@@ -9,16 +9,19 @@ const companies = [
 const getProjects = async (howMany = 3) => {
   const projectTemplate = `
     <div class="card-item">
-    <div class="card-item-contents">
       <h3>#TITLE#</h3>
       <p>#DESCRIPTION#</p>
       <a href="project.html">Learn more</a>
-    </div>
-    <img class="card-item-img" src="images/projects-section/#NUM#.jpg" alt=""/>
+      <img class="card-item-img" src="images/projects-section/#NUM#.jpg" alt=""/>
     </div>`;
   const projectListElement = document.querySelector("#projects .card-list");
   const promise = await fetch("https://jsonplaceholder.typicode.com/posts/");
   const data = await promise.json();
+
+  // reordena resultados al azar
+  data.sort(() => {
+    return Math.random() - 0.5;
+  });
 
   projectListElement.innerHTML = data
     .slice(0, howMany)
@@ -33,21 +36,24 @@ const getProjects = async (howMany = 3) => {
 const getServices = async (howMany = 3) => {
   const serviceTemplate = `
     <div class="card-item">
-    <div class="card-item-contents">
       <h3>#TITLE#</h3>
       <p>#DESCRIPTION#</p>
       <a href="#">Learn more</a>
-    </div>
-    <img class="card-item-icon" src="images/services-section/icons/#NUM#.svg" alt="" />
+      <img class="card-item-icon" src="images/services-section/icons/#NUM#.svg" alt="" />
     </div>`;
   const serviceListElement = document.querySelector("#services .card-list");
-  const promise = await fetch("https://jsonplaceholder.typicode.com/comments/");
+  const promise = await fetch("https://jsonplaceholder.typicode.com/posts/");
   const data = await promise.json();
+
+  // reordena resultados al azar
+  data.sort(() => {
+    return Math.random() - 0.5;
+  });
 
   serviceListElement.innerHTML = data
     .slice(0, howMany)
     .reduce((accum, elem) => {
-      let service = serviceTemplate.replace("#TITLE#", elem.name);
+      let service = serviceTemplate.replace("#TITLE#", elem.title);
       service = service.replace("#DESCRIPTION#", elem.body);
       service = service.replace("#NUM#", Math.floor(Math.random() * 3 + 1));
       return accum + service;

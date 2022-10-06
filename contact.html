@@ -20,8 +20,9 @@
         <!-- desktop nav -->
         <nav id="nav-primary">
           <a href="index.html">Home</a>
-          <a href="#">Projects</a>
-          <a href="#">Services</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#services">Services</a>
+  
         </nav>
         <a id="nav-contact" class="button" href="contact.html">Contact Us</a>
 
@@ -45,8 +46,8 @@
       <!-- mobile & tablet nav -->
       <div class="menu-hamburger-nav is-hidden">
         <a href="index.html">Home</a>
-        <a href="#">Projects</a>
-        <a href="#">Services</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#services">Services</a>
         <a class="button" href="contact.html">Contact Us</a>
       </div>
     </header>
@@ -57,10 +58,14 @@
           <label for="input-name">Full name *</label>
           <p id="error-name" class="error-msg"></p>
         </div>
+        <!-- atributos HTML para validación extra previa a JS
+        pattern="\w+\s\w+"
+        title="Debe incluir nombre y apellido"
+        -->
         <input
+          id="form-contact-name"
           type="text"
           name="input-name"
-          id="form-contact-name"
           placeholder="Enter your full name"
           required
         />
@@ -70,10 +75,15 @@
               <label for="input-email">Email</label>
               <p id="error-email" class="error-msg"></p>
             </div>
+
+            <!-- atributos HTML para validación extra previa a JS
+            pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+"
+            title="E.g. nombre@dominio.com"
+            -->
             <input
+              id="form-contact-email"
               type="email"
               name="input-email"
-              id="form-contact-email"
               placeholder="Enter your full email"
             />
           </div>
@@ -82,11 +92,17 @@
               <label for="input-phone">Phone</label>
               <p id="error-phone" class="error-msg"></p>
             </div>
+
+            <!-- atributos HTML para validación extra previa a JS
+            minlength="3"
+            pattern="[0-9]*"
+            title="Sólo números por favor"
+            -->
             <input
+              id="form-contact-phone"
               type="text"
               name="input-phone"
-              id="form-contact-phone"
-              placeholder="Enter your full phone (digits only)"
+              placeholder="Enter your number (at least 3 digits)"
             />
           </div>
         </div>
@@ -95,9 +111,9 @@
           <p id="error-message" class="error-msg"></p>
         </div>
         <textarea
-          name="textarea-message"
           id="form-contact-message"
-          placeholder="Write your message here... (at least 10 characters)"
+          name="textarea-message"
+          placeholder="Type your message here… (at least 10 characters)"
           required
           minlength="10"
           maxlength="512"

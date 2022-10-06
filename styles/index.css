@@ -158,10 +158,6 @@ h3 {
     margin-left: auto;
   }
 
-  #services .card-item {
-    max-width: var(--width-max-desktop);
-  }
-
   .hero-img {
     position: relative;
   }

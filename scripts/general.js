@@ -20,6 +20,8 @@ menuClose.addEventListener("click", () => {
 if (formNews) {
   formNews.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log("email:", document.getElementById("form-news-email").value);
+    const email = formNews.querySelector("input").value.trim();
+    console.log("email:", email);
+    alert(`'${email}' submitted succesfully!`);
   });
 }

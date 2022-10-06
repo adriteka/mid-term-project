@@ -20,8 +20,8 @@
         <!-- desktop nav -->
         <nav id="nav-primary">
           <a href="index.html">Home</a>
-          <a href="#">Projects</a>
-          <a href="#">Services</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#services">Services</a>
         </nav>
         <a id="nav-contact" class="button" href="contact.html">Contact Us</a>
 
@@ -45,8 +45,8 @@
       <!-- mobile & tablet nav -->
       <div class="menu-hamburger-nav is-hidden">
         <a href="index.html">Home</a>
-        <a href="#">Projects</a>
-        <a href="#">Services</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#services">Services</a>
         <a class="button" href="contact.html">Contact Us</a>
       </div>
     </header>
@@ -129,14 +129,21 @@
 
       <section id="services" class="container">
         <h2>Our services</h2>
-        <div class="card-list"></div>
+        <div class="card-list">
+
+        </div>
       </section>
       <div class="bg-newsletter">
         <section class="newsletter container">
           <h2>Do you have any questions?</h2>
           <p>Let us help you!</p>
           <form id="form-news" action="#" method="post">
-            <input type="email" name="" id="" placeholder="Enter your email" />
+            <input
+              type="email"
+              pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+"
+              title="E.g. nombre@dominio.com"
+              placeholder="Enter your email"
+            />
             <img id="icon-email" src="images/newsletter/icon/mail.svg" alt="" />
             <button class="button" type="submit">Subscribe</button>
           </form>
