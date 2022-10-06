@@ -1,4 +1,5 @@
 @import "./general.css";
+@import "./dark.css";
 
 article {
   font-size: var(--fs-body-reg);
@@ -16,9 +17,6 @@ article > img {
 }
 
 h1 {
-  font-size: var(--fs-heading-3);
-  font-weight: var(--fw-bold);
-  text-transform: capitalize;
   padding-bottom: 1rem;
 }
 
@@ -38,7 +36,7 @@ h1 {
 }
 
 #projects {
- margin-bottom: var(--spacing-section); 
+  margin-bottom: var(--spacing-section);
 }
 
 /* tablet */
@@ -58,6 +56,7 @@ h1 {
   }
 
   article > img {
+    width: 100%;
     aspect-ratio: 1.75;
     padding-bottom: var(--spacing-section);
   }

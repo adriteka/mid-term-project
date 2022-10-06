@@ -1,0 +1,81 @@
+.dark :is(.toggle-dark, #menu-open, #menu-close) {
+  filter: invert();
+}
+
+.dark .logo-circle {
+  filter: brightness(1.5);
+}
+
+body.dark {
+  color: var(--clr-neutral-light);
+  background-color: var(--clr-dark-dark);
+}
+
+.dark :is(h1, h2, h3) {
+  color: var(--clr-neutral-light);
+}
+
+/* conflictos de specificity con :is() */
+.dark a {
+  color: var(--clr-neutral-light);
+}
+
+/* conflictos de specificity con :is() */
+.dark #hero p {
+  color: var(--clr-dark-medium);
+}
+
+/* conflictos de specificity con :is() */
+.dark address {
+  color: var(--clr-dark-medium);
+}
+
+.dark :is(a:hover, .card-item > a, .nav-secondary a) {
+  color: var(--clr-secondary);
+}
+
+.dark .button:hover {
+  color: var(--clr-neutral-dark);
+  background-color: var(--clr-neutral-light);
+}
+
+.dark .menu-hamburger-nav a {
+  color: #fff;
+}
+
+.dark .menu-hamburger-nav .button {
+  color: #fff;
+  border: none;
+}
+
+.dark .button:hover {
+  color: var(--clr-neutral-dark);
+  background-color: var(--clr-neutral-light);
+}
+
+.dark :is(.card-item, #form-contact :is(input, textarea)) {
+  background-color: #1e1e1e;
+}
+
+.dark .newsletter h2 {
+  color: var(--clr-neutral-dark);
+}
+
+.dark .newsletter .button:hover {
+  color: #fff;
+  background-color: var(--clr-neutral-dark);
+}
+
+.dark
+  :is(.subtitle, .project-summary span, .project-summary time, #form-contact
+    label) {
+  color: var(--clr-dark-medium);
+}
+
+.dark #form-contact :is(input, textarea) {
+  color: var(--clr-neutral-light);
+}
+
+.dark .msg-help {
+  color: var(--clr-neutral-medium);
+}

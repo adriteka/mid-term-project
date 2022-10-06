@@ -1,4 +1,5 @@
 @import "./general.css";
+@import "./dark.css";
 
 #hero,
 .company-list,
@@ -9,10 +10,7 @@
 }
 
 #hero h1 {
-  font-size: 1.875rem; /* 30px */
-  font-weight: var(--fw-bold);
-  color: var(--clr-neutral-dark);
-  text-transform: capitalize;
+  font-size: var(--fs-heading-3);
   text-align: center;
   line-height: 1.25;
   padding-bottom: var(--spacing-general);
@@ -21,23 +19,20 @@
 h3 {
   font-size: var(--fs-body-med);
   font-weight: var(--fw-medium);
-  color: var(--clr-neutral-dark);
-  text-transform: capitalize;
 }
 
 #hero p {
   font-size: var(--fs-headline);
   text-align: center;
   color: var(--clr-neutral-medium);
-
   padding-bottom: var(--spacing-general);
 }
 
 #hero a {
   display: block;
   width: fit-content;
-  font-size: var(--fs-headline);
-  font-weight: var(--fw-medium);
+  /* font-size: var(--fs-headline); */
+  /* font-weight: var(--fw-medium); */
   margin: 1em auto;
 }
 
@@ -91,10 +86,10 @@ h3 {
 }
 
 #testimonials h2 {
-  font-size: 1.875rem; /* 30px */
   color: var(--clr-neutral-light);
   max-width: 20ch;
   margin-bottom: 0;
+  text-align: center;
 }
 
 #testimonials q {
@@ -131,7 +126,7 @@ h3 {
 /* bigger phone */
 @media only screen and (min-width: 480px) {
   #hero h1 {
-    font-size: var(--fs-heading-3);
+    font-size: var(--fs-heading-2);
   }
 
   #hero a {
@@ -193,7 +188,7 @@ h3 {
   }
 
   .newsletter h2 {
-    font-size: var(--fs-heading-3);
+    font-size: var(--fs-heading-2);
   }
 
   #testimonials {
@@ -236,7 +231,7 @@ h3 {
   #hero {
     margin-bottom: var(--spacing-section);
   }
-  
+
   .company-list,
   #projects,
   #testimonials,

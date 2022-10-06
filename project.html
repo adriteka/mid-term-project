@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Circle Agency - Project</title>
+    <title>Circle Agency - Simplify Project</title>
+    <link rel="icon" type="image/x-icon" href="images/logos/favicon.ico" />
     <link rel="stylesheet" href="styles/project.css" />
   </head>
   <body>
@@ -12,6 +13,7 @@
       <div>
         <a href="index.html"
           ><img
+            class="logo-circle"
             src="images/logos/circle.svg"
             alt="Circle Agency logo"
             title="Circle Agency"
@@ -23,10 +25,25 @@
           <a href="index.html#projects">Projects</a>
           <a href="index.html#services">Services</a>
         </nav>
-        <a id="nav-contact" class="button" href="contact.html">Contact Us</a>
+
+        <div id="nav-contact">
+          <img
+            src="images/nav/dark-mode.svg"
+            title="Dark Mode toggle"
+            alt="Dark Mode toggle icon"
+            class="menu-icon toggle-dark"
+          />
+          <a class="button" href="contact.html">Contact Us</a>
+        </div>
 
         <!-- mobile & tablet nav -->
         <div id="menu-hamburger">
+          <img
+            class="menu-icon toggle-dark"
+            src="images/nav/dark-mode.svg"
+            title="Dark Mode toggle"
+            alt="Dark Mode toggle icon"
+          />
           <img
             id="menu-open"
             class="menu-icon"
@@ -126,6 +143,7 @@
               pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+"
               title="E.g. nombre@dominio.com"
               placeholder="Enter your email"
+              required
             />
             <img id="icon-email" src="images/newsletter/icon/mail.svg" alt="" />
             <button class="button" type="submit">Subscribe</button>
@@ -135,12 +153,14 @@
     </main>
     <footer class="container">
       <div>
-        <img
-          class="logo-circle"
-          src="images/logos/circle.svg"
-          alt="Circle Agency logo"
-          title="Circle Agency"
-        />
+        <a href="index.html">
+          <img
+            class="logo-circle"
+            src="images/logos/circle.svg"
+            alt="Circle Agency logo"
+            title="Circle Agency"
+          />
+        </a>
         <address>
           2972 Westheimer Rd. Santa Ana,<br />
           Illinois 85486

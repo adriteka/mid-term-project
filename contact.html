@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Circle Agency - Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="images/logos/favicon.ico" />
     <link rel="stylesheet" href="styles/contact.css" />
   </head>
   <body class="container">
@@ -12,6 +13,7 @@
       <div>
         <a href="index.html"
           ><img
+            class="logo-circle"
             src="images/logos/circle.svg"
             alt="Circle Agency logo"
             title="Circle Agency"
@@ -22,12 +24,26 @@
           <a href="index.html">Home</a>
           <a href="index.html#projects">Projects</a>
           <a href="index.html#services">Services</a>
-  
         </nav>
-        <a id="nav-contact" class="button" href="contact.html">Contact Us</a>
+
+        <div id="nav-contact">
+          <img
+            src="images/nav/dark-mode.svg"
+            title="Dark Mode toggle"
+            alt="Dark Mode toggle icon"
+            class="menu-icon toggle-dark"
+          />
+          <a class="button" href="contact.html">Contact Us</a>
+        </div>
 
         <!-- mobile & tablet nav -->
         <div id="menu-hamburger">
+          <img
+            class="menu-icon toggle-dark"
+            src="images/nav/dark-mode.svg"
+            title="Dark Mode toggle"
+            alt="Dark Mode toggle icon"
+          />
           <img
             id="menu-open"
             class="menu-icon"
@@ -56,7 +72,7 @@
       <form id="form-contact" method="post" action="#">
         <div class="label-error">
           <label for="input-name">Full name *</label>
-          <p id="error-name" class="error-msg"></p>
+          <p id="error-name" class="msg-error"></p>
         </div>
         <!-- atributos HTML para validación extra previa a JS
         pattern="\w+\s\w+"
@@ -73,7 +89,7 @@
           <div>
             <div class="label-error">
               <label for="input-email">Email</label>
-              <p id="error-email" class="error-msg"></p>
+              <p id="error-email" class="msg-error"></p>
             </div>
 
             <!-- atributos HTML para validación extra previa a JS
@@ -90,7 +106,7 @@
           <div>
             <div class="label-error">
               <label for="input-phone">Phone</label>
-              <p id="error-phone" class="error-msg"></p>
+              <p id="error-phone" class="msg-error"></p>
             </div>
 
             <!-- atributos HTML para validación extra previa a JS
@@ -108,7 +124,7 @@
         </div>
         <div class="label-error">
           <label for="textarea-message">Message *</label>
-          <p id="error-message" class="error-msg"></p>
+          <p id="error-message" class="msg-error"></p>
         </div>
         <textarea
           id="form-contact-message"
@@ -123,12 +139,14 @@
     </main>
     <footer>
       <div>
-        <img
-          class="logo-circle"
-          src="images/logos/circle.svg"
-          alt="Circle Agency logo"
-          title="Circle Agency"
-        />
+        <a href="index.html">
+          <img
+            class="logo-circle"
+            src="images/logos/circle.svg"
+            alt="Circle Agency logo"
+            title="Circle Agency"
+          />
+        </a>
         <address>
           2972 Westheimer Rd. Santa Ana,<br />
           Illinois 85486

@@ -1,10 +1,7 @@
 @import "./general.css";
+@import "./dark.css";
 
 h1 {
-  font-size: var(--fs-heading-3);
-  font-weight: var(--fw-bold);
-  color: var(--clr-neutral-dark);
-  text-transform: capitalize;
   padding-bottom: var(--spacing-general);
 }
 
@@ -17,14 +14,11 @@ h1 {
   color: var(--clr-neutral-medium);
 }
 
-#form-contact input,
-#form-contact textarea,
-#form-contact button {
+#form-contact :is(input, textarea, button) {
   width: 100%;
 }
 
-#form-contact input,
-#form-contact textarea {
+#form-contact :is(input, textarea) {
   font-size: var(--fs-headline);
   background-color: #e6e9f1; /* var(--clr-neutral-medium) at 10% opacity */
   border: none;
@@ -50,9 +44,15 @@ h1 {
   padding-bottom: 0.375rem;
 }
 
-.error-msg {
+.msg-error {
   font-size: var(--fs-caption-1);
-  color: red;
+  color: var(--clr-msg-error);
+}
+
+.msg-help {
+  font-size: var(--fs-caption-1);
+  color: var(--clr-msg-help);
+
 }
 
 @media only screen and (min-width: 768px) {

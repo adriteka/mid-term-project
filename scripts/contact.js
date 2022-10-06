@@ -12,13 +12,14 @@ const doubleBlank = "  ";
 formContactMessage.addEventListener("keyup", () => {
   // mostrar contador a partir de 2 chars
   const charNum = formContactMessage.value.trimStart().length;
-  if (charNum > 1) {
-    errorMsgElem.style.color = "#292e47";
-    errorMsgElem.innerHTML = charNum + " characters";
-  } else {
-    errorMsgElem.style.color = "";
-    errorMsgElem.innerHTML = "";
-  }
+  if (charNum > 1) errorMsgElem.innerHTML = charNum + " characters";
+  else errorMsgElem.innerHTML = "";
+
+  // toggle clases para estilo (y que tb funcione en dark mode)
+  if (errorMsgElem.classList.contains("msg-error"))
+    errorMsgElem.classList.toggle("msg-error");
+  if (!errorMsgElem.classList.contains("msg-help"))
+    errorMsgElem.classList.toggle("msg-help");
 });
 
 // validación de formulario
@@ -26,7 +27,7 @@ formContact.addEventListener("submit", (e) => {
   e.preventDefault();
 
   // elimina posibles mensajes de error anteriores
-  for (elem of formContact.querySelectorAll(".error-msg")) elem.innerHTML = "";
+  for (elem of formContact.querySelectorAll(".msg-error")) elem.innerHTML = "";
 
   let error = false;
   const formValues = {
@@ -45,6 +46,8 @@ formContact.addEventListener("submit", (e) => {
     formValues[key] = val;
   }
 
+
+
   // comprueba que existe blank (entre nombre y apellido)
   if (formValues.name.indexOf(blank) === -1) {
     document.getElementById("error-name").innerHTML = "Missing name or surname";
@@ -55,7 +58,6 @@ formContact.addEventListener("submit", (e) => {
   // comprueba formato e-mail
   let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
   if (formValues.email && !regex.test(formValues.email)) {
-    console.log("validation:", formValues.email);
     document.getElementById("error-email").innerHTML =
       "The e-mail is incorrect";
     error = true;
@@ -63,7 +65,7 @@ formContact.addEventListener("submit", (e) => {
 
   // comprueba que el teléfono sean todo números
   regex = /^[0-9]+$/;
-  if (formValues.phone && !regex.test(formValues.phone)) {
+  if (formValues.phone && !regex.test(formValues.phone.replaceAll(" ", ""))) {
     document.getElementById("error-phone").innerHTML = "Numbers only please";
     error = true;
   } else if (formValues.phone && formValues.phone.length < 3) {
@@ -76,10 +78,14 @@ formContact.addEventListener("submit", (e) => {
     errorMsgElem.style.color = "";
     errorMsgElem.innerHTML = "The message is too short";
     error = true;
+    if (!errorMsgElem.classList.contains("msg-error"))
+      errorMsgElem.classList.toggle("msg-error");
+    if (errorMsgElem.classList.contains("msg-help"))
+      errorMsgElem.classList.toggle("msg-help");
   }
 
   if (error) {
-    // actualizar campos con valores sin blanks sobrantes
+    // actualizar campos con valores sin blanks 'innecesarios'
     document.getElementById("form-contact-name").value = formValues.name;
     document.getElementById("form-contact-email").value = formValues.email;
     document.getElementById("form-contact-phone").value = formValues.phone;
@@ -88,9 +94,9 @@ formContact.addEventListener("submit", (e) => {
     // mostrar valores validados por consola
     console.log("name   :", formValues.name);
     console.log("email  :", formValues.email);
-    console.log("phone  :", formValues.phone);
+    console.log("phone  :", formValues.phone.replaceAll(" ", ""));
     console.log("message:", formValues.message);
-    alert("Form submitted succesfully!");
+    alert("Form submitted successfully!");
 
     formContactName.value = "";
     formContactMail.value = "";

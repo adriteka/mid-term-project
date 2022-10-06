@@ -22,6 +22,16 @@ if (formNews) {
     e.preventDefault();
     const email = formNews.querySelector("input").value.trim();
     console.log("email:", email);
-    alert(`'${email}' submitted succesfully!`);
+    alert(`'${email}' submitted successfully!`);
+    formNews.querySelector("input").value = "";
+  });
+}
+
+if (sessionStorage.getItem("isDark") === "true")
+  sessionStorage.setItem("isDark", document.body.classList.toggle("dark"));
+
+for (elem of document.querySelectorAll(".toggle-dark")) {
+  elem.addEventListener("click", () => {
+    sessionStorage.setItem("isDark", document.body.classList.toggle("dark"));
   });
 }
