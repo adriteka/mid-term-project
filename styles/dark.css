@@ -1,9 +1,13 @@
-.dark :is(.toggle-dark, #menu-open, #menu-close) {
-  filter: invert();
+body.fade-in {
+  transition: background-color 500ms;
 }
 
 .dark .logo-circle {
   filter: brightness(1.5);
+}
+
+.dark :is(.toggle-dark, #menu-open, #menu-close) {
+  filter: invert();
 }
 
 body.dark {
@@ -21,12 +25,7 @@ body.dark {
 }
 
 /* conflictos de specificity con :is() */
-.dark #hero p {
-  color: var(--clr-dark-medium);
-}
-
-/* conflictos de specificity con :is() */
-.dark address {
+.dark :is(#hero p, address) {
   color: var(--clr-dark-medium);
 }
 
@@ -37,20 +36,7 @@ body.dark {
 .dark .button:hover {
   color: var(--clr-neutral-dark);
   background-color: var(--clr-neutral-light);
-}
-
-.dark .menu-hamburger-nav a {
-  color: #fff;
-}
-
-.dark .menu-hamburger-nav .button {
-  color: #fff;
-  border: none;
-}
-
-.dark .button:hover {
-  color: var(--clr-neutral-dark);
-  background-color: var(--clr-neutral-light);
+  transition: color 0.5s, background-color 0.5s;
 }
 
 .dark :is(.card-item, #form-contact :is(input, textarea)) {
@@ -66,9 +52,7 @@ body.dark {
   background-color: var(--clr-neutral-dark);
 }
 
-.dark
-  :is(.subtitle, .project-summary span, .project-summary time, #form-contact
-    label) {
+.dark :is(.subtitle, #form-contact label, .project-summary) {
   color: var(--clr-dark-medium);
 }
 
@@ -78,4 +62,13 @@ body.dark {
 
 .dark .msg-help {
   color: var(--clr-neutral-medium);
+}
+
+.dark :is(input:focus, textarea:focus) {
+  outline-style: solid;
+  outline-color: var(--clr-neutral-medium);
+}
+
+.dark .project-summary :is(span, time) {
+  color: var(--clr-neutral-light);
 }

@@ -201,6 +201,7 @@ textarea:focus {
   color: #fff;
   background-color: var(--clr-neutral-dark);
   text-decoration: none;
+  transition: color 0.5s, background-color 0.5s;
 }
 
 .bg-newsletter {

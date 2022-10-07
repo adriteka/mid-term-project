@@ -5,9 +5,6 @@ const formContactPhone = document.getElementById("form-contact-phone");
 const formContactMessage = formContact.querySelector("#form-contact-message");
 const errorMsgElem = document.getElementById("error-message");
 
-const blank = " ";
-const doubleBlank = "  ";
-
 // contador de chars del mensaje
 formContactMessage.addEventListener("keyup", () => {
   // mostrar contador a partir de 2 chars
@@ -15,7 +12,8 @@ formContactMessage.addEventListener("keyup", () => {
   if (charNum > 1) errorMsgElem.innerHTML = charNum + " characters";
   else errorMsgElem.innerHTML = "";
 
-  // toggle clases para estilo (y que tb funcione en dark mode)
+  // cambia estilo si no es mensaje de error
+  // class toggle para que funcione con estilos de modo oscuro
   if (errorMsgElem.classList.contains("msg-error"))
     errorMsgElem.classList.toggle("msg-error");
   if (!errorMsgElem.classList.contains("msg-help"))
@@ -25,6 +23,9 @@ formContactMessage.addEventListener("keyup", () => {
 // validación de formulario
 formContact.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  const blank = " ";
+  const doubleBlank = "  ";
 
   // elimina posibles mensajes de error anteriores
   for (elem of formContact.querySelectorAll(".msg-error")) elem.innerHTML = "";
@@ -46,8 +47,6 @@ formContact.addEventListener("submit", (e) => {
     formValues[key] = val;
   }
 
-
-
   // comprueba que existe blank (entre nombre y apellido)
   if (formValues.name.indexOf(blank) === -1) {
     document.getElementById("error-name").innerHTML = "Missing name or surname";
@@ -63,7 +62,7 @@ formContact.addEventListener("submit", (e) => {
     error = true;
   }
 
-  // comprueba que el teléfono sean todo números
+  // comprueba que el teléfono sólo contenga números
   regex = /^[0-9]+$/;
   if (formValues.phone && !regex.test(formValues.phone.replaceAll(" ", ""))) {
     document.getElementById("error-phone").innerHTML = "Numbers only please";
@@ -73,7 +72,7 @@ formContact.addEventListener("submit", (e) => {
     error = true;
   }
 
-  // comprueba que el mensaje tenga 10+ chars tras haber eliminado blanks
+  // comprueba que el mensaje sin blanks sobrantes siga teniendo 10+ chars
   if (formValues.message.length < 10) {
     errorMsgElem.style.color = "";
     errorMsgElem.innerHTML = "The message is too short";
@@ -96,11 +95,13 @@ formContact.addEventListener("submit", (e) => {
     console.log("email  :", formValues.email);
     console.log("phone  :", formValues.phone.replaceAll(" ", ""));
     console.log("message:", formValues.message);
-    alert("Form submitted successfully!");
 
+    errorMsgElem.innerHTML = "";
     formContactName.value = "";
     formContactMail.value = "";
     formContactPhone.value = "";
     formContactMessage.value = "";
+
+    alert("Form submitted successfully!");
   }
 });

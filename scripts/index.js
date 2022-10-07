@@ -6,7 +6,21 @@ const companies = [
   { name: "Amazon", url: "images/logos/amazon-logo.svg" },
 ];
 
-const getProjects = async (howMany = 3) => {
+function getCompanies(howMany = NaN) {
+  const companyTemplate = `<img class="company-item" src="#IMGURL#" alt="#NAME# logo" title="#NAME#" />`;
+  const companyListElement = document.querySelector(".company-list");
+  let companiesHTML = "";
+  let total = companies.length;
+  if (isNaN(howMany)) howMany = companies.length;
+  for (let i = 0; i < howMany; i++) {
+    companiesHTML += companyTemplate
+      .replaceAll("#NAME#", companies[i % total].name)
+      .replace("#IMGURL#", companies[i % total].url);
+  }
+  companyListElement.innerHTML = companiesHTML;
+}
+
+async function getProjects(howMany = 3) {
   const projectTemplate = `
     <div class="card-item">
       <h3>#TITLE#</h3>
@@ -31,9 +45,9 @@ const getProjects = async (howMany = 3) => {
       project = project.replace("#NUM#", Math.floor(Math.random() * 6 + 1));
       return accum + project;
     }, "");
-};
+}
 
-const getServices = async (howMany = 3) => {
+async function getServices(howMany = 3) {
   const serviceTemplate = `
     <div class="card-item">
       <h3>#TITLE#</h3>
@@ -58,21 +72,7 @@ const getServices = async (howMany = 3) => {
       service = service.replace("#NUM#", Math.floor(Math.random() * 3 + 1));
       return accum + service;
     }, "");
-};
-
-const getCompanies = (howMany = NaN) => {
-  const companyTemplate = `<img class="company-item" src="#IMGURL#" alt="#NAME# logo" title="#NAME#" />`;
-  const companyListElement = document.querySelector(".company-list");
-  let companiesHTML = "";
-  let total = companies.length;
-  if (isNaN(howMany)) howMany = companies.length;
-  for (let i = 0; i < howMany; i++) {
-    companiesHTML += companyTemplate
-      .replaceAll("#NAME#", companies[i % total].name)
-      .replace("#IMGURL#", companies[i % total].url);
-  }
-  companyListElement.innerHTML = companiesHTML;
-};
+}
 
 window.addEventListener("load", async () => {
   getCompanies(5);
